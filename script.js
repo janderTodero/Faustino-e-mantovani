@@ -47,3 +47,6 @@ const observerScale = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 fadeScaleCards.forEach(card => observerScale.observe(card));
+
+const cards = document.querySelectorAll('.fade-scale-card');
+
