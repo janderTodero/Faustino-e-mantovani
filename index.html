@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Faustino & Mantovani</title>
   <link rel="shortcut icon" href="./imagens/logo5.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -26,21 +30,18 @@
       },
     };
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body class="font-play bg-beige text-grayblack">
   <!-- Botão flutuante WhatsApp -->
   <div class="fixed bottom-5 right-5 z-50">
-    <a href="https://wa.me/17996205009" target="_blank"
-      class="bg-green-500 hover:bg-brown1 text-white p-4 rounded-full shadow-lg transition animate__animated animate__pulse animate__infinite">
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-  </div>
+  <a href="https://wa.me/17996205009" target="_blank"
+     id="whatsapp-btn"
+     class="whatsapp-pulse bg-green-500 hover:bg-brown1 text-white p-4 rounded-full shadow-lg flex items-center justify-center">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+</div>
 
-  <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
       <!-- Logo -->
@@ -74,46 +75,39 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home"
+ <section id="home"
     class="relative h-screen flex items-center justify-center text-center text-beige bg-cover bg-top bg-no-repeat"
     style="background-image: url('./imagens/ambos.jpg')">
-    <!-- Overlay escuro para leitura -->
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <!-- Conteúdo centralizado -->
-    <div class="relative z-10 max-w-3xl px-4">
-      <h3 class="text-white text-2xl md:text-2xl md:text-brown1 lg:text-4xl tracking-wider">
-        FAUSTINO & MANTOVANI
-      </h3>
-      <h2 class="text-3xl md:text-5xl font-bold mt-2 text-beige">
-        ADVOCACIA
-      </h2>
-      <p class="mt-4 text-sm md:text-lg leading-relaxed text-beige">
-        Escritório de Advocacia em Votuporanga-SP<br />
-        Civil | Trabalhista | Previdenciário | Eleitoral | Penal | Consumidor
-      </p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-xs mx-auto">
-        <a href="mailto:adv.faustinomantovani@gmail.com" target="_blank"
-          class="w-full sm:w-auto px-4 py-2 bg-brown2 hover:bg-brown1 text-white rounded-lg shadow-md transition text-base font-semibold">
-          Conte seu caso
-        </a>
-        <a href="https://wa.me/17996205009" target="_blank"
-          class="w-full sm:w-auto px-4 py-2 bg-green-500 hover:bg-brown3 text-white rounded-lg shadow-md flex items-center justify-center gap-2 transition text-base font-semibold">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <style>
-    /* Troca a imagem de fundo só no mobile (até 768px - md) */
-    @media (max-width: 767px) {
-      #home {
-        background-image: url('./imagens/background5.webp') !important;
-        /* Altere para o caminho da sua imagem mobile */
-      }
-    }
-  </style>
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <div class="relative z-10 max-w-3xl px-4">
+    
+    <h3 class="text-white text-2xl md:text-brown1 lg:text-4xl tracking-wider opacity-0 translate-y-[-30px] animate-fade-slide delay-300">
+      FAUSTINO & MANTOVANI
+    </h3>
+
+    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-beige opacity-0 translate-y-[-30px] animate-fade-slide delay-500">
+      ADVOCACIA
+    </h2>
+
+    <p class="mt-4 text-sm md:text-lg leading-relaxed text-beige opacity-0 translate-y-[-30px] animate-fade-slide delay-700">
+      Escritório de Advocacia em Votuporanga-SP<br />
+      Civil | Trabalhista | Previdenciário | Eleitoral | Penal | Consumidor
+    </p>
+
+    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-xs mx-auto opacity-0 translate-y-[-30px] animate-fade-slide delay-900">
+      <a href="mailto:adv.faustinomantovani@gmail.com" target="_blank"
+        class="w-full sm:w-auto px-4 py-2 bg-brown2 hover:bg-brown1 text-white rounded-lg shadow-md transition text-base font-semibold">
+        Conte seu caso
+      </a>
+      <a href="https://wa.me/17996205009" target="_blank"
+        class="w-full sm:w-auto px-4 py-2 bg-green-500 hover:bg-brown3 text-white rounded-lg shadow-md flex items-center justify-center gap-2 transition text-base font-semibold">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
   <section id="atuacao" class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-6">
@@ -121,8 +115,7 @@
         Áreas de Atuação
       </h1>
       <div class="space-y-4">
-        <!-- Direito Civil -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-scale-balanced mr-2 text-black"></i>
@@ -138,7 +131,7 @@
           </div>
         </div>
         <!-- Direito Trabalhista -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-handshake mr-2 text-black"></i> Direito
@@ -154,7 +147,7 @@
           </div>
         </div>
         <!-- Direito Previdenciário -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-person-cane mr-2 text-black"></i>
@@ -169,7 +162,7 @@
           </div>
         </div>
         <!-- Direito Eleitoral -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-check-to-slot mr-2 text-black"></i>
@@ -184,7 +177,7 @@
           </div>
         </div>
         <!-- Direito Penal -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-handcuffs mr-2 text-black"></i> Direito
@@ -199,7 +192,7 @@
           </div>
         </div>
         <!-- Direito do Consumidor -->
-        <div class="border border-brown2 rounded-lg overflow-hidden">
+        <div class="border border-brown2 rounded-lg overflow-hidden rounded-lg overflow-hidden opacity-0 translate-y-6 fade-slide-card">
           <button
             class="w-full flex items-center justify-between px-4 py-3 text-lg font-semibold bg-brown2 hover:bg-brown1 text-black transition toggle-btn">
             <span><i class="fa-solid fa-cart-shopping mr-2 text-black"></i>
@@ -238,7 +231,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
         <!-- Card Jessica -->
         <div
-          class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-brown2 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+          class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-brown2 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-2xl opacity-0 scale-90 fade-scale-card">
           <img src="./imagens/jessica.jpg" alt="Jessica Faustino"
             class="w-32 h-52 rounded-full object-cover object-center border-4 border-brown1 shadow-lg mb-4 bg-white" />
           <h3 class="text-2xl font-semibold text-brown3 mb-2">JESSICA FAUSTINO DOS SANTOS</h3>
@@ -255,7 +248,7 @@
         </div>
         <!-- Card Mariana -->
         <div
-          class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-brown2 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+          class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-brown2 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-2xl opacity-0 scale-90 fade-scale-card">
           <img src="./imagens/mariana.jpg" alt="Mariana Mantovani"
             class="w-32 h-52 rounded-full object-cover object-center border-4 border-brown1 shadow-lg mb-4 bg-white" />
           <h3 class="text-2xl font-semibold text-brown3 mb-2">MARIANA MANTOVANI</h3>
