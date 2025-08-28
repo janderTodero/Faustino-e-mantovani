@@ -13,7 +13,6 @@ function closeMenu() {
 }
 menuBtn.addEventListener("click", openMenu);
 closeMenuBtn.addEventListener("click", closeMenu);
-// Fecha menu ao clicar em um link
 mobileMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
@@ -50,3 +49,15 @@ fadeScaleCards.forEach(card => observerScale.observe(card));
 
 const cards = document.querySelectorAll('.fade-scale-card');
 
+const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+toggleButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling; // o <div> logo abaixo do botão
+    const icon = btn.querySelector(".fa-chevron-down");
+
+    content.classList.toggle("hidden");
+
+    icon.classList.toggle("rotate-180");
+  });
+});
